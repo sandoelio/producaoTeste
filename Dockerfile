@@ -32,5 +32,7 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 # Expor a porta 8000
 EXPOSE 8000
 
+RUN php artisan migrate --force
+
 # Comando para iniciar o servidor embutido do Laravel
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
