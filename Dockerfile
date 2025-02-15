@@ -33,7 +33,7 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 EXPOSE 8000
 
 # Executa as migrações ANTES de rodar os seeders
-RUN php artisan migrate --force && php artisan db:seed --force
+RUN php artisan migrate --force
 
 RUN php artisan config:clear && php artisan cache:clear
 
