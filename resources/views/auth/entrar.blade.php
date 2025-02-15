@@ -63,7 +63,7 @@
                 </div>
             @endif
             
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('login', [], true) }}">
                 @csrf
                 <input type="name" name="name" placeholder="Digite seu nome" required>
                 <input type="email" name="email" placeholder="Digite seu e-mail" required>
