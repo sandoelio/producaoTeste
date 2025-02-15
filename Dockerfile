@@ -32,9 +32,6 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 # Expor a porta 8000
 EXPOSE 8000
 
-# Executa as migrações ANTES de rodar os seeders
-RUN php artisan migrate --force
-
 RUN php artisan config:clear && php artisan cache:clear
 
 # Comando para iniciar o servidor embutido do Laravel
