@@ -6,12 +6,7 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\GameController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\ReportController;
-
 use Illuminate\Support\Facades\URL;
-
-Route::get('/test-url', function () {
-    return URL::current();
-});
 
 
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('form.entrar');
