@@ -7,13 +7,13 @@ use App\Http\Controllers\GameController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\Artisan;
+//use Illuminate\Support\Facades\Artisan;
 
-Route::get('/run-migrations', function () {
-    Artisan::call('migrate --force');
-    Artisan::call('db:seed --force');
-    return 'Migrations e Seeders executados!';
-});
+// Route::get('/run-migrations', function () {
+//     Artisan::call('migrate --force');
+//     Artisan::call('db:seed --force');
+//     return 'Migrations e Seeders executados!';
+// });
 
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('form.entrar');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
