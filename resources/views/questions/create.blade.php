@@ -4,7 +4,7 @@
 <div class="container">
     <h2 class="text-center my-4">Adicionar Nova Pergunta</h2>
 
-    <form action="{{ route('questions.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('questions.store', [], true) }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-3">
