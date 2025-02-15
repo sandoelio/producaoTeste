@@ -17,7 +17,7 @@
           </div>
         @endif
 
-        <form action="{{ route('questions.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('questions.store', [], true) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="question_text" class="form-label">Pergunta:</label>
