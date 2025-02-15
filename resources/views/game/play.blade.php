@@ -31,7 +31,7 @@
             </div>
 
             <!-- Formulário para enviar a resposta -->
-            <form action="{{ route('game.submitAnswer') }}" method="POST">
+            <form action="{{ route('game.submitAnswer', [], true) }}" method="POST">
                 @csrf
                 <input type="hidden" name="question_id" value="{{ $question->id }}">
                 <div class="input-group mb-3">
