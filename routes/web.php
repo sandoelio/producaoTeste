@@ -7,6 +7,13 @@ use App\Http\Controllers\GameController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\ReportController;
 
+use Illuminate\Support\Facades\URL;
+
+Route::get('/test-url', function () {
+    return URL::current();
+});
+
+
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('form.entrar');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
